@@ -1,0 +1,96 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  gap: 15px;
+}
+.header nav button {
+  background: none;
+  font-size: 15px;
+  padding: 10px;
+  color: var(--primary-color);
+  border-radius: 50px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+.header nav button:hover {
+  background-color: var(--description-color);
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  gap: 10px;
+}
+.logoContainer span {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 15px 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 12px 50px;
+  }
+
+  .logoContainer span {
+    font-size: 24px;
+  }
+
+  .header nav button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 30px;
+  }
+
+  .header nav {
+    gap: 10px;
+  }
+
+  .header nav button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .logoContainer span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 16px;
+  }
+
+  .header nav button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .logoContainer span {
+    font-size: 18px;
+  }
+}

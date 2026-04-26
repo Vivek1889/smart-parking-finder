@@ -1,0 +1,190 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--primary-color);
+  font-size: x-large;
+  background-color: var(--description-color);
+}
+
+.menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  min-width: 330px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 20px;
+  transform-origin: top;
+  animation: dropTopBottom 0.35s ease forwards;
+}
+.profileInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+.profileDetails h4 {
+  font-weight: 600;
+  color: #333;
+}
+.profileDetails p {
+  color: #4e4e4e;
+  margin-top: 3px;
+}
+.menu li {
+  padding: 10px 0px;
+  list-style: none;
+}
+
+.menu li:hover {
+  background: var(--description-color);
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.linkInfo span {
+  background: gainsboro;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.icon {
+  font-size: 25px;
+  color: #4e4e4e;
+  margin: 0;
+  padding: 0;
+}
+@keyframes dropTopBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Existing CSS stays same above */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .menu {
+    width: 280px;
+    right: -20px;
+    padding: 16px;
+  }
+
+  .profileInfo {
+    gap: 12px;
+  }
+
+  .profileDetails h4 {
+    font-size: 16px;
+  }
+
+  .profileDetails p {
+    font-size: 14px;
+  }
+
+  .linkInfo span {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .dropdown {
+    position: static;
+  }
+
+  .menu {
+    width: 92vw;
+    max-width: 330px;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+  }
+
+  .profile {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .profileInfo {
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .profileDetails h4 {
+    font-size: 15px;
+  }
+
+  .profileDetails p {
+    font-size: 13px;
+  }
+
+  .menu li {
+    padding: 12px 0;
+  }
+
+  .menu li a {
+    font-size: 14px;
+  }
+
+  .linkInfo {
+    gap: 10px;
+  }
+
+  .linkInfo span {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
