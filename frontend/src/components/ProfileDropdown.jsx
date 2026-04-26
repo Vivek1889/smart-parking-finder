@@ -5,6 +5,8 @@ import { TbLogout2 } from "react-icons/tb";
 import { IoMdHome } from "react-icons/io";
 import { RxDashboard } from "react-icons/rx";
 import { FaHistory } from "react-icons/fa";
+import { TbLogin2 } from "react-icons/tb";
+import { IoPersonAdd } from "react-icons/io5";
 function ProfileDropDown() {
   const [open, setOpen] = useState(false);
 
@@ -64,6 +66,34 @@ function ProfileDropDown() {
                   </span>
 
                   <p>Dashboard</p>
+                </div>
+                <p className={styles.icon}>
+                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <div className={styles.linkInfo}>
+                  <span>
+                    <TbLogin2></TbLogin2>
+                  </span>
+
+                  <p>Login</p>
+                </div>
+                <p className={styles.icon}>
+                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <div className={styles.linkInfo}>
+                  <span>
+                    <IoPersonAdd></IoPersonAdd>
+                  </span>
+
+                  <p>Sign Up</p>
                 </div>
                 <p className={styles.icon}>
                   <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
