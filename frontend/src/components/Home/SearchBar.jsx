@@ -3,7 +3,6 @@ import { FaRegCircle } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { MdOutlineTimer } from "react-icons/md";
 function SearchBar() {
-  console.log(styles);
   return (
     <form className={styles.searchBar}>
       <div className={styles.wrapper}>

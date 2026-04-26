@@ -4,7 +4,7 @@ function HeroSection() {
   return (
     <div className={styles.heroSection}>
       <div className={styles.infoSection}>
-        <h1>Travel and worry about Your parking ?</h1>
+        <h1>Travel anywhere but don't worry about Your parking.</h1>
       </div>
       <div className={styles.imageSection}>
         <img

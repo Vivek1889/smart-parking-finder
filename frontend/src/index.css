@@ -7,9 +7,9 @@
 
 :root {
   --primary-color: #e36a6a;
-  --background-color: #fffbf1;
   --secondary-color: #ffb2b2;
   --description-color: #fff2d0;
+  --background-color: #fffbf1;
 }
 body {
   min-height: 100vh;

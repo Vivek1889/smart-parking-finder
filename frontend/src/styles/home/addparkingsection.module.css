@@ -1,0 +1,108 @@
+.addParkingSection {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 28px;
+
+  background: linear-gradient(135deg, #d95b5b 0%, #e97c7c 50%, #ffb2b2 100%);
+  margin: 50px 0;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(227, 106, 106, 0.25);
+}
+
+.addParkingSection h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.addParkingSection p {
+  margin: 0;
+  color: #fff;
+  max-width: 700px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.addParkingSection button {
+  border: none;
+  padding: 15px 34px;
+  background: #ffffff;
+  color: #d95b5b;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.addParkingSection button:hover {
+  transform: translateY(-2px);
+  background: #fff7f7;
+}
+
+@media (max-width: 992px) {
+  .addParkingSection {
+    padding: 45px 50px;
+  }
+
+  .addParkingSection h1 {
+    font-size: 34px;
+  }
+
+  .addParkingSection p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .addParkingSection {
+    padding: 35px 30px;
+    border-radius: 22px;
+    margin: 35px 0;
+  }
+
+  .addParkingSection h1 {
+    font-size: 28px;
+  }
+
+  .addParkingSection p {
+    font-size: 15px;
+  }
+
+  .addParkingSection button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addParkingSection {
+    padding: 28px 20px;
+    gap: 16px;
+  }
+
+  .addParkingSection h1 {
+    font-size: 24px;
+  }
+
+  .addParkingSection p {
+    font-size: 14px;
+  }
+
+  .addParkingSection button {
+    padding: 14px 24px;
+  }
+}
