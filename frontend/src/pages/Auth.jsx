@@ -3,7 +3,8 @@ import SignUp from "../components/auth/SignUp";
 function Auth() {
   return (
     <>
-      <SignUp></SignUp>
+      {/* <SignUp></SignUp>
+      <Login></Login> */}
     </>
   );
 }

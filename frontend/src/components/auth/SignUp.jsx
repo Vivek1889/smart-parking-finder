@@ -5,9 +5,9 @@ import PersonalDetails from "./PersonalDetails";
 function SignUp() {
   return (
     <div className={styles.signup}>
-      {/* <EnterEmail></EnterEmail> */}
-      {/* <VerifyEmail></VerifyEmail> */}
-      {/* <PersonalDetails></PersonalDetails> */}
+      {/* <EnterEmail></EnterEmail>
+      <VerifyEmail></VerifyEmail>
+      <PersonalDetails></PersonalDetails> */}
     </div>
   );
 }

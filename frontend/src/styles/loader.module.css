@@ -1,0 +1,104 @@
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 9999;
+}
+
+/* Main Loader */
+.loaderBox {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rotating Rings */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid var(--primary-color);
+  border-right: 4px solid var(--secondary-color);
+}
+
+.ring:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+.ring:nth-child(2) {
+  width: 90px;
+  height: 90px;
+  animation: spinReverse 1.6s linear infinite;
+}
+
+.ring:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+.centerPulse {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.2),
+    0 0 40px var(--primary-color);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.centerPulse span {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.loadingText {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: blink 1.4s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
