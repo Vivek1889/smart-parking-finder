@@ -8,9 +8,20 @@ import { FaHistory } from "react-icons/fa";
 import { TbLogin2 } from "react-icons/tb";
 import { IoPersonAdd } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import API from "../services/api";
 function ProfileDropDown() {
   const [open, setOpen] = useState(false);
-
+  const user = useSelector((store) => store.user);
+  const handleLogout = async () => {
+    try {
+      await API.post("/logout");
+      localStorage.removeItem("user");
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className={styles.dropdown}>
@@ -21,16 +32,18 @@ function ProfileDropDown() {
         {open && (
           <ul className={styles.menu}>
             {/* this is profile Section */}
-            <div className={styles.profileInfo}>
-              <div className={styles.profile}>V</div>
-              <div className={styles.profileDetails}>
-                <h4>Vivek Kumar</h4>
+            {user && (
+              <div className={styles.profileInfo}>
+                <div className={styles.profile}>V</div>
+                <div className={styles.profileDetails}>
+                  <h4>{`${user?.firstname}  ${user.lastname}`}</h4>
 
-                <p className="">viveksh94108@gmail.com</p>
+                  <p className="">{user.email}</p>
+                </div>
               </div>
-            </div>
+            )}
             <hr />
-            {/* Navigation Links  starts from here  */}
+
             <li>
               <Link to="/">
                 <div className={styles.linkInfo}>
@@ -45,76 +58,91 @@ function ProfileDropDown() {
                 </p>
               </Link>
             </li>
-            <li>
-              <Link to="/bookinghistory">
-                <div className={styles.linkInfo}>
-                  <span>
-                    <FaHistory></FaHistory>
-                  </span>
+            {user && (
+              <li>
+                <Link to="/bookinghistory">
+                  <div className={styles.linkInfo}>
+                    <span>
+                      <FaHistory></FaHistory>
+                    </span>
 
-                  <p>Booking History</p>
-                </div>
-                <p className={styles.icon}>
-                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard">
-                <div className={styles.linkInfo}>
-                  <span>
-                    <RxDashboard></RxDashboard>
-                  </span>
+                    <p>Booking History</p>
+                  </div>
+                  <p className={styles.icon}>
+                    <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
+                  </p>
+                </Link>
+              </li>
+            )}
+            {user?.role === "host" && (
+              <li>
+                <Link to="/dashboard">
+                  <div className={styles.linkInfo}>
+                    <span>
+                      <RxDashboard />
+                    </span>
 
-                  <p>Dashboard</p>
-                </div>
-                <p className={styles.icon}>
-                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link to="/auth/login">
-                <div className={styles.linkInfo}>
-                  <span>
-                    <TbLogin2></TbLogin2>
-                  </span>
+                    <p>Dashboard</p>
+                  </div>
 
-                  <p>Login</p>
-                </div>
-                <p className={styles.icon}>
-                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link to="/auth/signup">
-                <div className={styles.linkInfo}>
-                  <span>
-                    <IoPersonAdd></IoPersonAdd>
-                  </span>
+                  <p className={styles.icon}>
+                    <MdOutlineKeyboardArrowRight />
+                  </p>
+                </Link>
+              </li>
+            )}
+            {!user && (
+              <li>
+                <Link to="/auth/login">
+                  <div className={styles.linkInfo}>
+                    <span>
+                      <TbLogin2></TbLogin2>
+                    </span>
 
-                  <p>Sign Up</p>
-                </div>
-                <p className={styles.icon}>
-                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
-                </p>
-              </Link>
-            </li>
-            <li>
-              <a href="/">
-                <div className={styles.linkInfo}>
-                  <span>
-                    <TbLogout2></TbLogout2>
-                  </span>
+                    <p>Login</p>
+                  </div>
+                  <p className={styles.icon}>
+                    <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
+                  </p>
+                </Link>
+              </li>
+            )}
+            {!user && (
+              <li>
+                <Link to="/auth/signup">
+                  <div className={styles.linkInfo}>
+                    <span>
+                      <IoPersonAdd></IoPersonAdd>
+                    </span>
 
-                  <p>Logout</p>
-                </div>
-                <p className={styles.icon}>
-                  <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
-                </p>
-              </a>
-            </li>
+                    <p>Sign Up</p>
+                  </div>
+                  <p className={styles.icon}>
+                    <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
+                  </p>
+                </Link>
+              </li>
+            )}
+            {user && (
+              <li
+                onClick={() => {
+                  handleLogout();
+                }}
+              >
+                <a href="/">
+                  <div className={styles.linkInfo}>
+                    <span>
+                      <TbLogout2></TbLogout2>
+                    </span>
+
+                    <p>Logout</p>
+                  </div>
+                  <p className={styles.icon}>
+                    <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
+                  </p>
+                </a>
+              </li>
+            )}
           </ul>
         )}
       </div>
