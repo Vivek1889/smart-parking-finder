@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 50px;
 }
 
 .container h1 {
@@ -12,7 +13,7 @@
   text-align: center;
 }
 
-.container input[type="text"] {
+.container input[type="email"] {
   width: 100%;
   padding: 16px 18px;
   border: 2px solid var(--description-color);

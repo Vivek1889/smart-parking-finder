@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.input {
+  display: none;
+}
+.header h1,
+p {
+  color: var(--primary-color);
+}
+.slider {
+  width: 60px;
+  height: 30px;
+  background-color: #f563634a;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ef4444;
+  border-radius: 50%;
+  top: 3px;
+  left: 4px;
+  transition: all 0.3s ease;
+}
+.input:checked + .slider {
+  background: #23a7675c;
+}
+.input:checked + .slider::before {
+  transform: translateX(28px);
+  background: #22c55e;
+}
+.statusText::after {
+  content: "Closed";
+  font-size: 14px;
+  color: #ef4444;
+  transition: 0.3s;
+}
+.input:checked ~ .statusText::after {
+  content: "Active";
+  color: #22c55e;
+}

@@ -7,6 +7,7 @@ import { RxDashboard } from "react-icons/rx";
 import { FaHistory } from "react-icons/fa";
 import { TbLogin2 } from "react-icons/tb";
 import { IoPersonAdd } from "react-icons/io5";
+import { Link } from "react-router-dom";
 function ProfileDropDown() {
   const [open, setOpen] = useState(false);
 
@@ -31,7 +32,7 @@ function ProfileDropDown() {
             <hr />
             {/* Navigation Links  starts from here  */}
             <li>
-              <a href="/">
+              <Link to="/">
                 <div className={styles.linkInfo}>
                   <span>
                     <IoMdHome></IoMdHome>
@@ -42,10 +43,10 @@ function ProfileDropDown() {
                 <p className={styles.icon}>
                   <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/bookinghistory">
                 <div className={styles.linkInfo}>
                   <span>
                     <FaHistory></FaHistory>
@@ -56,10 +57,10 @@ function ProfileDropDown() {
                 <p className={styles.icon}>
                   <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/dashboard">
                 <div className={styles.linkInfo}>
                   <span>
                     <RxDashboard></RxDashboard>
@@ -70,10 +71,10 @@ function ProfileDropDown() {
                 <p className={styles.icon}>
                   <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/auth/login">
                 <div className={styles.linkInfo}>
                   <span>
                     <TbLogin2></TbLogin2>
@@ -84,10 +85,10 @@ function ProfileDropDown() {
                 <p className={styles.icon}>
                   <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/auth/signup">
                 <div className={styles.linkInfo}>
                   <span>
                     <IoPersonAdd></IoPersonAdd>
@@ -98,7 +99,7 @@ function ProfileDropDown() {
                 <p className={styles.icon}>
                   <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/">

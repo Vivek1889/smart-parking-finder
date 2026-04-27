@@ -1,17 +1,35 @@
 import styles from "../../styles/auth/enteremail.module.css";
 
-function EnterEmail() {
+function EnterEmail({ data, handleChange, nextStep }) {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    nextStep();
+  };
+
   return (
-    <form className={styles.container}>
+    <form onSubmit={submitHandler} className={styles.container}>
       <h1>Enter Your Email.</h1>
-      <input type="text" placeholder="Enter email" />
-      <label htmlFor="terms">
-        <input type="checkbox" id="terms" />
-        Accept terms and conditions ?
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Email"
+        value={data.email}
+        onChange={handleChange}
+      />
+
+      <label>
+        <input
+          type="checkbox"
+          name="acceptedTerms"
+          checked={data.acceptedTerms}
+          onChange={handleChange}
+        />
+        Accept Terms
       </label>
-      <p>Click on continue to get otp for verifying email</p>
+      <p>Click on continue for next step</p>
       <button type="submit">Continue</button>
     </form>
   );
 }
+
 export default EnterEmail;

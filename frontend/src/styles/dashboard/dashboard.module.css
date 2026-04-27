@@ -1,0 +1,40 @@
+.dashboard {
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 24px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .cards {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 16px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 12px;
+  }
+}

@@ -1,5 +1,6 @@
 import styles from "../styles/header.module.css";
 import ProfileDropDown from "../components/ProfileDropdown";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className={styles.header}>
@@ -8,7 +9,11 @@ function Header() {
         <p>Smart Parking Finder</p>
       </div>
       <nav>
-        <button>Add a Parking</button>
+        <Link to="/addparking">
+          {" "}
+          <button>Add a Parking</button>
+        </Link>
+
         <ProfileDropDown></ProfileDropDown>
       </nav>
     </div>

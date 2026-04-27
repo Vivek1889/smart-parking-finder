@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   width: 100%;
+  box-sizing: border-box;
+
   margin-top: 15px;
   padding: 30px clamp(15px, 6vw, 80px);
-  position: relative;
+
   background: var(--description-color);
   border-radius: 20px;
 }
@@ -15,6 +18,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 
 .stepCircle {

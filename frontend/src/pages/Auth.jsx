@@ -1,10 +1,9 @@
-import Login from "../components/auth/Login";
-import SignUp from "../components/auth/SignUp";
+import { Outlet } from "react-router-dom";
+
 function Auth() {
   return (
     <>
-      {/* <SignUp></SignUp>
-      <Login></Login> */}
+      <Outlet></Outlet>
     </>
   );
 }

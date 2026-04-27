@@ -1,5 +1,6 @@
 import styles from "../../styles/home/addparkingsection.module.css";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function AddParkingSection() {
   return (
     <div className={styles.addParkingSection}>
@@ -10,10 +11,12 @@ function AddParkingSection() {
         Voluptate quibusdam, deserunt sunt quasi tempore eveniet recusandae
         dolore reiciendis iste!
       </p>
-      <button>
-        {" "}
-        <FaArrowRight></FaArrowRight> Add Parking
-      </button>
+      <Link to="/addparking" className={styles.link}>
+        <button>
+          {" "}
+          <FaArrowRight></FaArrowRight> Add Parking
+        </button>
+      </Link>
     </div>
   );
 }
