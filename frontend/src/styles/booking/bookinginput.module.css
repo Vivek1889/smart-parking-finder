@@ -1,0 +1,66 @@
+.card {
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  color: var(--primary-color);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.inputGroup label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="datetime-local"] {
+  color: black;
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: var(--description-color);
+}
+.inputGroup input[type="text"]:focus,
+.inputGroup input[type="datetime-local"]:focus {
+  outline: 2px solid var(--primary-color);
+  box-shadow: 0 0 8px rgba(61, 194, 236, 0.3);
+}
+
+.radioGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.radioItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 5px;
+  /* background: #1f2937; */
+  cursor: pointer;
+  border: 1px solid grey;
+  transition: 0.3s;
+}
+
+.radioItem:hover {
+  background: var(--description-color);
+}
+
+.radioItem input {
+  accent-color: var(--primary-color);
+}

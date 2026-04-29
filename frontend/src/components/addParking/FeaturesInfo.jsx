@@ -36,7 +36,7 @@ function FeaturesInfo({ data, updateField, nextStep, prevStep }) {
             <input
               type="checkbox"
               name="ev"
-              checked={data.ev}
+              checked={data.charging}
               onChange={updateField}
             />
             <GiElectric></GiElectric>

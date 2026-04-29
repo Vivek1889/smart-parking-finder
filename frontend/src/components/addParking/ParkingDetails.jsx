@@ -12,8 +12,8 @@ function ParkingDetails({ data, updateField, nextStep, prevStep }) {
 
             <input
               type="number"
-              name="totalSlots"
-              value={data.totalSlots}
+              name="totalslots"
+              value={data.totalslots}
               onChange={updateField}
               className={styles.input}
               placeholder="Enter total slots"
@@ -40,8 +40,8 @@ function ParkingDetails({ data, updateField, nextStep, prevStep }) {
 
             <input
               type="time"
-              name="openingTime"
-              value={data.openingTime}
+              name="openingtime"
+              value={data.openingtime}
               onChange={updateField}
               className={styles.input}
             />
@@ -52,8 +52,8 @@ function ParkingDetails({ data, updateField, nextStep, prevStep }) {
 
             <input
               type="time"
-              name="closingTime"
-              value={data.closingTime}
+              name="closingtime"
+              value={data.closingtime}
               onChange={updateField}
               className={styles.input}
             />
@@ -64,8 +64,8 @@ function ParkingDetails({ data, updateField, nextStep, prevStep }) {
           <label>Parking Type</label>
 
           <select
-            name="parkingType"
-            value={data.parkingType}
+            name="parkingtype"
+            value={data.parkingtype}
             onChange={updateField}
             className={styles.select}
           >

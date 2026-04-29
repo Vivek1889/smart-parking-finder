@@ -3,12 +3,13 @@
   color: var(--primary-color);
   border-radius: 18px;
   border: 1px solid rgba(148, 163, 184, 0.1);
-
   padding: 24px;
   width: 100%;
-  max-width: 300px;
+  max-width: 310px;
   min-height: 150px;
   transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 @media (max-width: 1024px) {

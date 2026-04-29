@@ -1,0 +1,149 @@
+.card {
+  overflow: hidden;
+  transition: 0.3s;
+  color: var(--primary-color);
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid rgb(89, 89, 89);
+  position: relative;
+  border-radius: 5px;
+  width: 1000px;
+}
+
+.imageContainer {
+  height: 300px;
+  width: 100%;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  text-transform: capitalize;
+  z-index: 990;
+}
+
+.active {
+  background: rgb(0, 200, 83);
+}
+
+.inactive {
+  background: #d50000;
+}
+
+.content {
+  padding: 15px;
+}
+.content h3 {
+  padding: 15px 0px;
+  font-size: 19px;
+}
+.location {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.slots {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.price {
+  margin: 10px 0px;
+  font-weight: bolder;
+  font-size: 19px;
+  color: var(--primary-color);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.features span {
+  background: var(--description-color);
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .card {
+    width: 100%; /* take full available width */
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .imageContainer {
+    height: 240px; /* slightly smaller */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* stack image + content */
+    width: 100%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 200px;
+  }
+
+  .content {
+    padding: 10px 5px;
+  }
+
+  .slots {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: 12px;
+  }
+
+  .imageContainer {
+    min-height: 50vh;
+  }
+
+  .content h3 {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .features {
+    font-size: 12px;
+  }
+
+  .features span {
+    padding: 4px 8px;
+  }
+}

@@ -30,6 +30,7 @@ function Login() {
       if (res.data.success) {
         alert("user Logged in success");
         navigate("/");
+        window.location.reload();
       }
     } catch (error) {
       setErrors(

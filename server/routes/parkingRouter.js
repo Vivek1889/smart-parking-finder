@@ -4,11 +4,7 @@ let verifyAuth = require("../middlewares/authMiddleware");
 let parkingRouter = express.Router();
 
 parkingRouter.post("/addparking", verifyAuth, parkingController.postAddParking);
-parkingRouter.get(
-  "/getallparkings",
-  verifyAuth,
-  parkingController.getAllParkings,
-);
+parkingRouter.get("/getallparkings", parkingController.getAllParkings);
 parkingRouter.put(
   "/editparking/:id",
   verifyAuth,

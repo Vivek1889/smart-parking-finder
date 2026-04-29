@@ -7,6 +7,7 @@ import { RxDashboard } from "react-icons/rx";
 import { FaHistory } from "react-icons/fa";
 import { TbLogin2 } from "react-icons/tb";
 import { IoPersonAdd } from "react-icons/io5";
+import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import API from "../services/api";
@@ -26,7 +27,7 @@ function ProfileDropDown() {
     <>
       <div className={styles.dropdown}>
         <div className={styles.profile} onClick={() => setOpen(!open)}>
-          V
+          <span>{user?.firstname[0] || <FaUserAlt></FaUserAlt>}</span>
         </div>
 
         {open && (
@@ -60,13 +61,13 @@ function ProfileDropDown() {
             </li>
             {user && (
               <li>
-                <Link to="/bookinghistory">
+                <Link to="/bookings">
                   <div className={styles.linkInfo}>
                     <span>
                       <FaHistory></FaHistory>
                     </span>
 
-                    <p>Booking History</p>
+                    <p>Bookings</p>
                   </div>
                   <p className={styles.icon}>
                     <MdOutlineKeyboardArrowRight></MdOutlineKeyboardArrowRight>

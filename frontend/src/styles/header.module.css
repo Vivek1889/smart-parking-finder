@@ -10,6 +10,9 @@
   background: var(--background-color);
   z-index: 999;
 }
+.header p {
+  margin: 0;
+}
 .header nav {
   display: flex;
   justify-content: center;

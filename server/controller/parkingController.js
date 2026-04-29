@@ -1,25 +1,10 @@
 let Parking = require("../models/parkingModel");
-let { check, validationResult } = require("express-validator");
-
+let User = require("../models/userModel");
 exports.postAddParking = [
-  check("name")
-    .notEmpty()
-    .withMessage("Parking Name is required")
-    .trim()
-    .isLength({ min: 2 })
-    .withMessage("Parking Name contains atleast 2 Characters"),
-
-  check("imageurl")
-    .notEmpty()
-    .withMessage("imageurl Url is required")
-    .trim()
-    .isLength({ min: 5 })
-    .withMessage("imageurl url contains atleast 5 Characters"),
-
   async (req, res, next) => {
     try {
       let {
-        name,
+        parkingname,
         imageurl,
         latitude,
         longitude,
@@ -35,7 +20,9 @@ exports.postAddParking = [
         address,
       } = req.body;
 
-      if (!name || !latitude || !longitude || !totalslots || !price) {
+      console.log(req.body);
+      if (!parkingname || !latitude || !longitude || !totalslots || !price) {
+        console.log("lkjljn");
         return res.status(400).json({
           success: false,
           message: "Missing required fields",
@@ -44,7 +31,7 @@ exports.postAddParking = [
 
       let parking = new Parking(
         req.user.id,
-        name,
+        parkingname,
         imageurl,
         latitude,
         longitude,
@@ -61,6 +48,7 @@ exports.postAddParking = [
         address,
       );
       await parking.addParking();
+      await User.updateRole(req.user.id);
       return res.status(201).json({
         success: true,
         message: "Parking Added Successfully",

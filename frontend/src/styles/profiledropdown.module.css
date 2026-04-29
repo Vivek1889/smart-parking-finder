@@ -2,8 +2,8 @@
   position: relative;
   display: inline-block;
 }
-.dropdown p {
-  color: #333;
+.dropdown span {
+  color: var(--primary-color);
 }
 .profile {
   width: 40px;

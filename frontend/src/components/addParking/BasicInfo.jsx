@@ -10,8 +10,8 @@ function BasicInfo({ data, updateField, nextStep }) {
           <label>Parking Name</label>
           <input
             className={styles.input}
-            name="parkingName"
-            value={data.parkingName}
+            name="parkingname"
+            value={data.parkingname}
             onChange={updateField}
             placeholder="Enter parking name"
           />
@@ -21,8 +21,8 @@ function BasicInfo({ data, updateField, nextStep }) {
           <label>Image URL</label>
           <input
             className={styles.input}
-            name="imageUrl"
-            value={data.imageUrl}
+            name="imageurl"
+            value={data.imageurl}
             onChange={updateField}
             placeholder="Enter image url"
           />

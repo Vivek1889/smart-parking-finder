@@ -2,9 +2,15 @@ import styles from "../../styles/home/searchbar.module.css";
 import { FaRegCircle } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { MdOutlineTimer } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 function SearchBar() {
+  let navigate = useNavigate();
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/parkings");
+  };
   return (
-    <form className={styles.searchBar}>
+    <form className={styles.searchBar} onSubmit={handleSubmit}>
       <div className={styles.wrapper}>
         <FaRegCircle></FaRegCircle>
         <input type="text" placeholder="Going to" required />

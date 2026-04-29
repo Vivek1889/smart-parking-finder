@@ -7,12 +7,7 @@ import {
   FaWarehouse,
 } from "react-icons/fa";
 
-function ReviewSubmit({ data, prevStep }) {
-  const handleSubmit = () => {
-    console.log(data);
-    alert("Parking Added Successfully");
-  };
-
+function ReviewSubmit({ data, prevStep, handleSubmit }) {
   return (
     <div className={styles.reviewWrapper}>
       <div className={styles.reviewCard}>
@@ -30,7 +25,7 @@ function ReviewSubmit({ data, prevStep }) {
             <FaWarehouse className={styles.icon} />
             <div>
               <span>Parking Name</span>
-              <h4>{data.parkingName}</h4>
+              <h4>{data.parkingname}</h4>
             </div>
           </div>
 
@@ -46,7 +41,7 @@ function ReviewSubmit({ data, prevStep }) {
             <FaParking className={styles.icon} />
             <div>
               <span>Total Slots</span>
-              <h4>{data.totalSlots}</h4>
+              <h4>{data.totalslots}</h4>
             </div>
           </div>
 
@@ -61,7 +56,7 @@ function ReviewSubmit({ data, prevStep }) {
 
         <div className={styles.typeBox}>
           <p>Parking Type</p>
-          <span className={styles.badge}>{data.parkingType} </span>
+          <span className={styles.badge}>{data.parkingtype} </span>
         </div>
 
         <div className={styles.buttonGroup}>

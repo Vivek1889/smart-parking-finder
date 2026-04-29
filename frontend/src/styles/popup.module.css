@@ -5,7 +5,7 @@
   inset: 0;
   width: 100%;
   min-height: 100vh;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(1px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +23,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  color: black;
+  background: var(--primary-color);
+  color: #fff;
   border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.7),
@@ -47,7 +47,7 @@
 .popupIcon {
   font-size: 100px;
   margin-bottom: 10px;
-  color: black;
+  color: #fff;
 }
 
 .crossIcon {
@@ -61,6 +61,6 @@
 }
 
 .crossIcon:hover {
-  color: var(--primary-color);
+  color: #fff;
   transform: rotate(90deg);
 }

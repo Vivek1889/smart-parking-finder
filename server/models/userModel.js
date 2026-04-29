@@ -17,5 +17,8 @@ class User {
   static findOne(email) {
     return db.execute("select * from users where email=?", [email]);
   }
+  static updateRole(id) {
+    return db.execute("UPDATE users SET role = ? WHERE id = ?", ["host", id]);
+  }
 }
 module.exports = User;
