@@ -1,0 +1,90 @@
+.container {
+  width: 360px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.mapCard {
+  height: 150px;
+  border-radius: 20px;
+  background: url("https://maps.gstatic.com/tactile/basepage/pegman_sherlock.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mapBtn {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.section {
+  background: white;
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background-color: var(--description-color);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.header span {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: var(--background-color);
+  border-radius: 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.active {
+  background: var(--primary-color);
+}
+
+.icon {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.count {
+  color: #777;
+  font-size: 14px;
+}
+
+.divider {
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 15px 0;
+}

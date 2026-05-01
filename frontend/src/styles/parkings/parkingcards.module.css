@@ -1,9 +1,11 @@
 .parkingCards {
-  padding: 40px 100px;
-  display: flex;
+  padding: 0px 0px;
+
+  /* display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
-  align-items: center;
+  align-items: center; */
 }
 
 @media (max-width: 1024px) {

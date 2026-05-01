@@ -9,13 +9,14 @@ import Dashboard from "./pages/Dashboard";
 import Booking from "./pages/Booking";
 import Loader from "./components/Loader";
 import ParkingCards from "./components/parkings/ParkingCards";
+import Parkings from "./pages/Parkings";
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "./store/userSlice";
 import API from "./services/api";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import BookingDetails from "./components/booking/BookingDetails";
+import ParkingDetails from "./components/booking/parkingDetails";
 
 function MainLayout() {
   const dispatch = useDispatch();
@@ -35,7 +36,6 @@ function MainLayout() {
           dispatch(userActions.setUser(null));
         }
       } catch (err) {
-        // console.log(err.response?.data || err.message);
         dispatch(userActions.setUser(null));
       } finally {
         setLoading(false);
@@ -68,11 +68,11 @@ const router = createBrowserRouter([
       },
       {
         path: "parkings",
-        element: <ParkingCards></ParkingCards>,
+        element: <Parkings></Parkings>,
       },
       {
-        path: "bookingdetails",
-        element: <BookingDetails></BookingDetails>,
+        path: "parkingdetails",
+        element: <ParkingDetails></ParkingDetails>,
       },
       {
         path: "bookings",

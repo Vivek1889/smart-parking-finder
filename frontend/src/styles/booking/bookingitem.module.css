@@ -1,149 +1,179 @@
-.card {
-  overflow: hidden;
-  transition: 0.3s;
-  color: var(--primary-color);
+/* bookingitem.module.css */
+
+.container {
+  width: 50%;
   display: flex;
-  gap: 20px;
-  padding: 20px;
-  border: 1px solid rgb(89, 89, 89);
-  position: relative;
-  border-radius: 5px;
-  width: 1000px;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.imageContainer {
-  height: 300px;
+.card {
   width: 100%;
-}
-
-.imageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.status {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 12px;
+  background: var(--description-color);
+  border: 1px solid #e5e7eb;
   border-radius: 20px;
-  font-size: 12px;
-  color: white;
-  text-transform: capitalize;
-  z-index: 990;
+  padding: 22px;
+  box-sizing: border-box;
 }
 
-.active {
-  background: rgb(0, 200, 83);
+.timeSection,
+.parkingDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.inactive {
-  background: #d50000;
+.timeSection h4,
+.timeSection p,
+.parkingDetails h4,
+.parkingDetails p {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
 }
 
-.content {
-  padding: 15px;
-}
-.content h3 {
-  padding: 15px 0px;
-  font-size: 19px;
-}
-.location {
-  font-size: 14px;
-  color: var(--secondary-color);
+.timeSection h4,
+.parkingDetails h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
 }
 
-.slots {
+.timeSection p,
+.parkingDetails p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 6px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.card:first-child {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  color: var(--primary-color);
+  align-items: flex-start;
+  gap: 20px;
 }
 
-.price {
-  margin: 10px 0px;
-  font-weight: bolder;
-  font-size: 19px;
-  color: var(--primary-color);
-}
-
-.features {
+.topSection {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 13px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.features span {
-  background: var(--description-color);
-  padding: 5px 10px;
-  border-radius: 8px;
+.profileSection {
+  display: flex;
+  gap: 14px;
+}
+
+.profileImage {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profileInfo h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
   color: var(--primary-color);
-  font-weight: bold;
 }
 
-/* Tablets */
-@media (max-width: 1024px) {
-  .card {
-    width: 100%; /* take full available width */
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 
-  .imageContainer {
-    height: 240px; /* slightly smaller */
-  }
+  font-size: 16px;
+  color: #5b6780;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column; /* stack image + content */
-    width: 100%;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .imageContainer {
-    width: 100%;
-    height: 200px;
-  }
-
-  .content {
-    padding: 10px 5px;
-  }
-
-  .slots {
-    flex-direction: column;
-    gap: 5px;
-  }
+.arrow {
+  font-size: 20px;
+  color: #5b6780;
+  cursor: pointer;
 }
 
-/* Small mobile */
-@media (max-width: 480px) {
-  .card {
-    padding: 12px;
-  }
+.infoSection {
+  margin-top: 28px;
 
-  .imageContainer {
-    min-height: 50vh;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
 
-  .content h3 {
-    font-size: 16px;
-  }
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
-  .price {
-    font-size: 16px;
-  }
+  color: #44516d;
+  font-size: 17px;
+}
 
-  .features {
-    font-size: 12px;
-  }
+.infoItem p {
+  margin: 0;
+}
 
-  .features span {
-    padding: 4px 8px;
-  }
+.divider {
+  margin: 28px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.rulesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.ruleItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #44516d;
+  font-size: 17px;
+}
+
+.ruleItem p {
+  margin: 0;
+}
+
+.contactBtn {
+  margin-top: 30px;
+  padding: 14px 24px;
+
+  border-radius: 40px;
+  border: 1px solid #d1d5db;
+  background: var(--background-color);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--primary-color);
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: #f3f7ff;
 }

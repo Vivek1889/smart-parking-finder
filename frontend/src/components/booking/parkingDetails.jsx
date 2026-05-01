@@ -2,8 +2,8 @@ import styles from "../../styles/booking/bookingdetails.module.css";
 import BoongngItem from "./BookingItem";
 import BookingSummary from "./BookingSummary";
 import { useSelector } from "react-redux";
-function BookingDetails() {
-  let parking = useSelector((store) => store.bookingDetails || null);
+function ParkingDetails() {
+  let parking = useSelector((store) => store.parkingDetails || null);
 
   if (!parking) {
     return <h2>Loading booking details...</h2>;
@@ -16,4 +16,4 @@ function BookingDetails() {
     </div>
   );
 }
-export default BookingDetails;
+export default ParkingDetails;

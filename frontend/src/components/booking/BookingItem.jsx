@@ -1,39 +1,107 @@
 import styles from "../../styles/booking/bookingitem.module.css";
-import ParkingMap from "./ParkingMap";
+import { BsCalendarDateFill } from "react-icons/bs";
+import { MdAccessTimeFilled } from "react-icons/md";
+import { LuCctv, LuShell } from "react-icons/lu";
+import { MdOutlineSecurity } from "react-icons/md";
 
+import { GiElectric } from "react-icons/gi";
+import { FaPersonShelter } from "react-icons/fa6";
+import {
+  FaStar,
+  FaShieldAlt,
+  FaBolt,
+  FaCar,
+  FaChevronRight,
+} from "react-icons/fa";
+
+import { MdOutlinePets } from "react-icons/md";
+
+import { LuCalendarDays } from "react-icons/lu";
+import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 function BookingItem({ data }) {
   return (
-    <div className={styles.card}>
-      <span
-        className={`${styles.status} ${data.status === "active" ? styles.active : styles.inactive}`}
-      >
-        {data.status}
-      </span>
-      <div className={styles.imageContainer}>
-        <ParkingMap data={data}></ParkingMap>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <div className={styles.timeSection}>
+          <h4>
+            {" "}
+            <span>
+              <BsCalendarDateFill></BsCalendarDateFill>
+            </span>
+            10/11/2020
+          </h4>
+          <p>
+            {" "}
+            <span>
+              {" "}
+              <MdAccessTimeFilled />
+            </span>
+            00:10:20
+          </p>
+        </div>
+
+        <div className={styles.parkingDetails}>
+          <h4>City Mall Parking</h4>
+          <p>Mehrauli Dashna - 201015</p>
+        </div>
       </div>
+      {/* second card */}
+      <div className={styles.card}>
+        {/* Top Section */}
+        <div className={styles.topSection}>
+          <div className={styles.profileSection}>
+            <img
+              src="https://www.shutterstock.com/image-photo/aerial-view-city-parking-260nw-2597475437.jpg"
+              alt="driver"
+              className={styles.profileImage}
+            />
 
-      {/* Content */}
-      <div className={styles.content}>
-        <h3>{data.name}</h3>
-        <p className={styles.location}>📍 {data.address}</p>
+            <div className={styles.profileInfo}>
+              <h3>City Mall Parking</h3>
 
-        {/* Slots */}
-        <div className={styles.slots}>
-          <span>Available: {data.availableslots}</span>
-          <span>Total: {data.totalslots}</span>
+              <div className={styles.rating}>
+                <FaStar />
+                <span>4.3/5 - 27 ratings</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <hr />
-        {/* Price */}
-        <div className={styles.price}>₹{data.price}/day</div>
-        <br />
-        {/* Features */}
-        <div className={styles.features}>
-          {!!data.cctv && <span>📷 CCTV</span>}
-          {!!data.security && <span>🛡 Security</span>}
-          {!!data.charging && <span>⚡ EV</span>}
-          {!!data.covered && <span>🏠 Covered</span>}
+
+        {/* Driver Info */}
+        <div className={styles.infoSection}>
+          <div className={styles.infoItem}>
+            <LuCctv></LuCctv>
+            <p>CCTV Enabled</p>
+          </div>
+          <div className={styles.infoItem}>
+            <MdOutlineSecurity />
+            <p>Security Provided</p>
+          </div>
+          <div className={styles.infoItem}>
+            <GiElectric />
+            <p>Charging for EV</p>
+          </div>
+          <div className={styles.infoItem}>
+            <FaPersonShelter />
+            <p>Parking is Fully Covered</p>
+          </div>
         </div>
+
+        <hr className={styles.divider} />
+
+        {/* Rules */}
+        <div className={styles.rulesSection}>
+          <div className={styles.ruleItem}>
+            <FaBolt />
+            <p>Your booking will be confirmed instantly</p>
+          </div>
+        </div>
+
+        {/* Button */}
+        <button className={styles.contactBtn}>
+          <HiOutlineChatBubbleLeftRight />
+          Contact Parking Owner
+        </button>
       </div>
     </div>
   );

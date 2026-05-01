@@ -1,0 +1,13 @@
+.parkings {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 100px;
+}
+.searchSection {
+  margin-top: 3px;
+  padding: 0px 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  background: var(--background-color);
+}

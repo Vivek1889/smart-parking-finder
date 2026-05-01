@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-let bookingDetails = createSlice({
-  name: "bookingDetails",
+let parkingDetails = createSlice({
+  name: "parkingDetails",
   initialState: null,
   reducers: {
     addToDetails: (state, action) => {
@@ -9,5 +9,5 @@ let bookingDetails = createSlice({
   },
 });
 
-export default bookingDetails.reducer;
-export const bookingDetailsActions = bookingDetails.actions;
+export default parkingDetails.reducer;
+export const parkingDetailsActions = parkingDetails.actions;
