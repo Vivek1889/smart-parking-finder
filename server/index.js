@@ -5,6 +5,7 @@ const parkingRouter = require("./routes/parkingRouter");
 const cookieParser = require("cookie-parser");
 let bookingRouter = require("./routes/bookingRouter");
 let dashboardRouter = require("./routes/dashboardRouter");
+let emailRouter = require("./routes/emailRouter");
 
 let app = express();
 
@@ -39,6 +40,7 @@ app.use("/api", authRouter);
 app.use("/api", parkingRouter);
 app.use("/api", bookingRouter);
 app.use("/api", dashboardRouter);
+app.use("/api", emailRouter);
 
 app.use("/api", (req, res) => {
   res.json({ message: "Api is Running" });
