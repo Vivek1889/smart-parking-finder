@@ -12,12 +12,13 @@ exports.sendOtp = async (req, res) => {
       },
     });
 
+    let otp = Math.floor(100000 + Math.random() * 900000);
     let message = {
       from: "vivek kumar <viveksh94108@gmail.com>",
       to: "viveksh94108@gmail.com",
-      subject: "Test email by Vivek",
-      text: "Hello dosto kaise hain aap!",
-      html: "<p><b>Hello</b> my friends</p>",
+      subject: "otp for email verification",
+      text: `Your OTP is ${otp}`,
+      html: `<p> Your OTP is ${otp} <br/> This is a server generated email please don't reply to it....</p>`,
     };
 
     let info = await transport.sendMail(message);
