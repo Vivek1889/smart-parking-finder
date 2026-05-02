@@ -1,12 +1,9 @@
-/* bookingitem.module.css */
-
 .container {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
 .card {
   width: 100%;
   background: var(--description-color);
@@ -37,10 +34,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   font-size: 18px;
   font-weight: 600;
-  color: #1f2937;
 }
 
 .timeSection p,
@@ -48,7 +43,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   margin-top: 6px;
   font-size: 15px;
   color: #6b7280;
@@ -65,6 +59,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 20px;
 }
 
 .profileSection {
@@ -97,7 +92,6 @@
   display: flex;
   align-items: center;
   gap: 6px;
-
   font-size: 16px;
   color: #5b6780;
 }
@@ -110,7 +104,6 @@
 
 .infoSection {
   margin-top: 28px;
-
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -120,7 +113,6 @@
   display: flex;
   align-items: center;
   gap: 14px;
-
   color: #44516d;
   font-size: 17px;
 }
@@ -135,17 +127,10 @@
   border-top: 1px solid #e5e7eb;
 }
 
-.rulesSection {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
 .ruleItem {
   display: flex;
   align-items: center;
   gap: 14px;
-
   color: #44516d;
   font-size: 17px;
 }
@@ -157,23 +142,136 @@
 .contactBtn {
   margin-top: 30px;
   padding: 14px 24px;
-
   border-radius: 40px;
   border: 1px solid #d1d5db;
   background: var(--background-color);
-
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-
   font-size: 17px;
   font-weight: 600;
   color: var(--primary-color);
-
   cursor: pointer;
-  transition: 0.3s ease;
 }
-
 .contactBtn:hover {
   background: #f3f7ff;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+
+  .profileInfo h3 {
+    font-size: 22px;
+  }
+
+  .infoItem,
+  .ruleItem {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card:first-child {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .topSection {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profileInfo h3 {
+    font-size: 20px;
+  }
+
+  .timeSection h4,
+  .parkingDetails h4 {
+    font-size: 16px;
+  }
+
+  .timeSection p,
+  .parkingDetails p {
+    font-size: 14px;
+  }
+
+  .infoItem,
+  .ruleItem {
+    font-size: 15px;
+  }
+
+  .contactBtn {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 16px;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .topSection {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .profileSection {
+    width: 100%;
+  }
+
+  .profileImage {
+    width: 54px;
+    height: 54px;
+  }
+
+  .profileInfo h3 {
+    font-size: 18px;
+  }
+
+  .rating {
+    font-size: 14px;
+  }
+
+  .infoItem,
+  .ruleItem {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .timeSection h4,
+  .parkingDetails h4 {
+    font-size: 15px;
+  }
+
+  .timeSection p,
+  .parkingDetails p {
+    font-size: 13px;
+  }
+
+  .contactBtn {
+    margin-top: 24px;
+
+    padding: 12px;
+
+    font-size: 14px;
+    border-radius: 30px;
+  }
 }

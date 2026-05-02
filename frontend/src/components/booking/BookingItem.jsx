@@ -3,20 +3,11 @@ import { BsCalendarDateFill } from "react-icons/bs";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { LuCctv, LuShell } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
-
 import { GiElectric } from "react-icons/gi";
 import { FaPersonShelter } from "react-icons/fa6";
-import {
-  FaStar,
-  FaShieldAlt,
-  FaBolt,
-  FaCar,
-  FaChevronRight,
-} from "react-icons/fa";
+import { GrLocationPin } from "react-icons/gr";
+import { FaStar, FaBolt, FaCar, FaChevronRight } from "react-icons/fa";
 
-import { MdOutlinePets } from "react-icons/md";
-
-import { LuCalendarDays } from "react-icons/lu";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 function BookingItem({ data }) {
   return (
@@ -42,7 +33,10 @@ function BookingItem({ data }) {
 
         <div className={styles.parkingDetails}>
           <h4>City Mall Parking</h4>
-          <p>Mehrauli Dashna - 201015</p>
+          <p>
+            {" "}
+            <GrLocationPin></GrLocationPin>Mehrauli Dashna - 201015
+          </p>
         </div>
       </div>
       {/* second card */}

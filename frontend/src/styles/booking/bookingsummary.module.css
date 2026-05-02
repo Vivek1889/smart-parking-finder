@@ -1,113 +1,114 @@
 .bagSummaryContainer {
+  width: 35%;
   display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .bagSummary {
-  width: 380px;
-  padding: 20px;
-  color: var(--primary-color);
-  border-left: 1px solid rgb(89, 89, 89);
-}
+  width: 100%;
 
-/* Header */
-.priceHeader {
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--background-color);
   color: var(--primary-color);
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-}
-
-.priceItem {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.priceItemTag {
-  color: var(--primary-color);
-}
-
-.priceItemValue {
-  color: var(--primary-color);
-  font-weight: 500;
+  box-sizing: border-box;
 }
 
 .priceFooter {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
-  font-weight: 600;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--description-color);
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  gap: 10px;
 }
 
-.priceFooter .priceItemValue {
-  color: var(--primary-color);
-}
-
-/* Button */
 .placeOrderBtn {
   width: 100%;
-  margin-top: 20px;
-  padding: 12px;
+  margin-top: 28px;
+  padding: 15px;
   border: none;
-  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
   background: var(--primary-color);
   color: white;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
-}
-.disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+  transition: 0.3s ease;
 }
 
 .placeOrderBtn:hover {
-  transform: scale(1.02);
+  transform: translateY(-2px);
+  opacity: 0.95;
 }
 
 @media (max-width: 1024px) {
-  .bagSummary {
-    width: 300px; /* slightly smaller */
-    padding: 15px;
+  .bagSummaryContainer {
+    width: 40%;
   }
 }
 
 @media (max-width: 768px) {
-  .bagSummary {
-    width: 100%; /* full width */
-    border-left: none; /* remove side border */
-    border-top: 1px solid rgb(89, 89, 89);
-    margin-top: 20px;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-  .bagSummary {
-    padding: 15px 10px;
-  }
   .bagSummaryContainer {
-    flex-direction: column;
-    gap: 0;
+    width: 100%;
   }
-  .priceItem {
-    font-size: 13px;
+
+  .bagSummary {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
   }
 
   .priceFooter {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .placeOrderBtn {
-    padding: 10px;
+    padding: 15px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bagSummaryContainer {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .bagSummary {
+    border-radius: 18px;
+  }
+
+  .priceHeader {
+    font-size: 15px;
+  }
+
+  .priceItem {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+
+  .priceFooter {
+    align-items: flex-start;
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .priceFooter .priceItemValue {
+    font-size: 16px;
+  }
+
+  .placeOrderBtn {
+    padding: 12px;
+    font-size: 13px;
+    border-radius: 40px;
   }
 }

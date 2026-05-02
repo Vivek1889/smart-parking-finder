@@ -3,6 +3,7 @@ import BookingInput from "./BookingInput";
 import API from "../../services/api";
 import Loader from "../Loader";
 import Popup from "../Popup";
+import { MdOutlineElectricBolt } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef, useState } from "react";
@@ -66,19 +67,6 @@ function BookingSummary({ data }) {
         <BookingInput formData={formData} handleChange={handleChange} />
         <div className={styles.bagSummary}>
           <div>
-            <div className={styles.priceHeader}>PRICE DETAILS (1 Item)</div>
-
-            <div className={styles.priceItem}>
-              <span className={styles.priceItemTag}>Total MRP</span>
-              <span className={styles.priceItemValue}>₹{data.price}</span>
-            </div>
-            <div className={styles.priceItem}>
-              <span className={styles.priceItemTag}>Platform Fee</span>
-              <span className={styles.priceItemValue}>₹2</span>
-            </div>
-
-            <hr />
-
             <div className={styles.priceFooter}>
               <span className={styles.priceItemTag}>Total Amount</span>
               <span className={styles.priceItemValue}>₹{finalAmount}</span>
@@ -92,6 +80,7 @@ function BookingSummary({ data }) {
             }`}
             disabled={data.status === "closed"}
           >
+            <MdOutlineElectricBolt></MdOutlineElectricBolt>
             CONFIRM BOOKING
           </button>
         </div>
