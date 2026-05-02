@@ -25,6 +25,7 @@
   font-size: 18px;
   font-weight: 700;
   gap: 10px;
+  border: 1px solid #e5e7eb;
 }
 
 .placeOrderBtn {

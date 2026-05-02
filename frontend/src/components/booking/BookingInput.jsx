@@ -3,24 +3,12 @@ import styles from "../../styles/booking/bookinginput.module.css";
 function BookingInput({ formData, handleChange }) {
   return (
     <div className={styles.card}>
-      {/* Date */}
-      <div className={styles.inputGroup}>
-        <label>Date</label>
-        <input
-          type="datetime-local"
-          name="date"
-          value={formData.date}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
       {/* Vehicle Number */}
       <div className={styles.inputGroup}>
         <label>Vehicle Number</label>
         <input
           type="text"
-          name="vehicleno" // ✅ match parent state
+          name="vehicleno"
           placeholder="UP14AB1234"
           value={formData.vehicleno}
           onChange={handleChange}

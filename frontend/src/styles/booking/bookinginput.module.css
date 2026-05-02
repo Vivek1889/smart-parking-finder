@@ -7,6 +7,7 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--primary-color);
   transition: 0.3s ease;
+  border: 1px solid #e5e7eb;
 }
 
 .title {

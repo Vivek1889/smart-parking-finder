@@ -13,7 +13,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--primary-color);
   font-size: x-large;
   background-color: var(--description-color);
 }
