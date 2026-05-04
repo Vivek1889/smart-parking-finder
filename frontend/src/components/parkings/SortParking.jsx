@@ -63,25 +63,6 @@ const SortParking = () => {
           </div>
         ))}
       </div>
-
-      <div className={styles.divider}></div>
-
-      {/* DEPARTURE TIME */}
-      <div className={styles.section}>
-        <h3>Opening time</h3>
-
-        {["Before 06:00", "06:00 - 12:00", "12:01 - 18:00", "After 18:00"].map(
-          (time, i) => (
-            <div key={i} className={styles.option}>
-              <div className={styles.left}>
-                <input type="checkbox" />
-                <span>{time}</span>
-              </div>
-              <span className={styles.count}>25</span>
-            </div>
-          ),
-        )}
-      </div>
     </div>
   );
 };

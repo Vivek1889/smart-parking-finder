@@ -2,28 +2,40 @@
   border: 2px solid var(--secondary-color);
   border-radius: 15px;
   padding: 16px;
-  min-width: 800px;
+  width: 100%;
   margin: 20px auto;
   background: var(--description-color);
   font-family: sans-serif;
   cursor: pointer;
+  box-sizing: border-box;
 }
+
 .card:hover {
   border: 2px solid var(--primary-color);
 }
-p {
-  margin: 10px 0px;
-}
-.top {
+
+.topSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.topSection h4 {
+  color: var(--primary-color);
+  margin: 10px 0px;
+}
+p {
+  margin: 0px;
 }
 
 .timeSection {
   display: flex;
   align-items: flex-start;
   gap: 15px;
+  width: max-content;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .timeBlock {
@@ -71,6 +83,7 @@ p {
   font-size: 24px;
   font-weight: bold;
   color: var(--primary-color);
+  white-space: nowrap;
 }
 
 .location {
@@ -79,22 +92,92 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
+  word-break: break-word;
 }
 
 .location span {
   flex: 1;
+  overflow-wrap: break-word;
 }
+
 .inactive {
   opacity: 0.35;
   cursor: not-allowed;
 }
+
 .bottom {
   margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .icon {
   font-size: 20px;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+
+  .timeSection {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+  }
+  .timeBlock {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  .timeBlock p {
+    margin: 0;
+  }
+  .lineWrapper {
+    flex-direction: column;
+    position: absolute;
+  }
+  .line {
+    width: 2px;
+    height: 28px;
+  }
+  .topSection {
+    width: 100%;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+  .time {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .location {
+    font-size: 13px;
+    align-items: flex-start;
+  }
+
+  .duration {
+    font-size: 11px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
 }

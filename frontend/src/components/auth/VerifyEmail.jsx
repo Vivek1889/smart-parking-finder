@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "../../styles/auth/verifyemail.module.css";
-
+import API from "../../services/api";
 function VerifyEmail() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputsRef = useRef([]);

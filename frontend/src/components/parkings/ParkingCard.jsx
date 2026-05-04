@@ -23,34 +23,34 @@ function ParkingCard({ data }) {
         handleSetDetails();
       }}
     >
-      <p>{data.name}</p>
-      {/* Top Section */}
-      <div className={styles.top}>
-        <div className={styles.timeSection}>
-          {/* Opening */}
-          <div className={styles.timeBlock}>
-            <span className={styles.time}>{data.openingtime}</span>
-            <p>Opening Time</p>
-          </div>
-
-          {/* Line */}
-          <div className={styles.lineWrapper}>
-            <div className={styles.dot}></div>
-            <div className={styles.line}></div>
-            <div className={styles.dot}></div>
-          </div>
-
-          {/* Closing */}
-          <div className={styles.timeBlock}>
-            <span className={styles.time}>{data.closingtime}</span>
-            <p>Closing Time</p>
-          </div>
-        </div>
+      <div className={styles.topSection}>
+        <h4>{data.name}</h4>
         {data.status === "active" ? (
           <div className={styles.price}>Rs.{data.price}</div>
         ) : (
           <div className={styles.price}>Inactive</div>
         )}
+      </div>
+
+      <div className={styles.timeSection}>
+        {/* Opening */}
+        <div className={styles.timeBlock}>
+          <span className={styles.time}>{data.openingtime}</span>
+          <p>Opening Time</p>
+        </div>
+
+        {/* Line */}
+        <div className={styles.lineWrapper}>
+          <div className={styles.dot}></div>
+          <div className={styles.line}></div>
+          <div className={styles.dot}></div>
+        </div>
+
+        {/* Closing */}
+        <div className={styles.timeBlock}>
+          <span className={styles.time}>{data.closingtime}</span>
+          <p>Closing Time</p>
+        </div>
       </div>
 
       {/* Location */}

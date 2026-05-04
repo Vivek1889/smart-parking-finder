@@ -30,6 +30,7 @@
   border-radius: 20px;
   margin-bottom: 15px;
   background-color: var(--description-color);
+  width: 100%;
 }
 .header {
   display: flex;
@@ -87,4 +88,9 @@
   background: #eee;
   border-radius: 10px;
   margin: 15px 0;
+}
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
 }
