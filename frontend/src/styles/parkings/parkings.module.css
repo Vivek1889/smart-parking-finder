@@ -1,20 +1,21 @@
 .parkings {
   display: flex;
   justify-content: space-between;
-
   padding: 90px 100px;
   gap: 20px;
   box-sizing: border-box;
 }
 
 .searchSection {
-  margin-top: 3px;
   padding: 0px 100px;
   width: 100%;
   position: fixed;
   z-index: 99;
   background: var(--background-color);
   box-sizing: border-box;
+}
+.responsiveSearchBar {
+  display: none;
 }
 .mobileTopSection {
   display: flex;
@@ -44,22 +45,25 @@
 }
 @media (max-width: 992px) {
   .parkings {
-    padding: 90px 50px;
-    flex-direction: column;
+    padding: 0px 0px;
   }
-
-  .searchSection {
+  .sortParking {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
   .parkings {
-    padding: 90px 20px;
+    padding: 0px 15px;
     gap: 15px;
   }
-
+  .responsiveSearchBar {
+    display: block;
+  }
+  .searchBar {
+    display: none;
+  }
   .searchSection {
-    padding: 0px 20px;
+    padding: 0px 0px;
   }
 }
