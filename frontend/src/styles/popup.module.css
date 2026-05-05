@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  padding: 0px 20px;
 }
 
 .popup {
@@ -17,14 +18,14 @@
   min-width: 400px;
   min-height: 300px;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--primary-color);
-  color: #fff;
+  color: var(--primary-color);
+  background-color: #fff;
   border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.7),
@@ -47,7 +48,7 @@
 .popupIcon {
   font-size: 100px;
   margin-bottom: 10px;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .crossIcon {
@@ -61,6 +62,6 @@
 }
 
 .crossIcon:hover {
-  color: #fff;
+  color: red;
   transform: rotate(90deg);
 }
