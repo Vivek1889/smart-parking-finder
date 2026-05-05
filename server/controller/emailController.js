@@ -15,7 +15,7 @@ exports.sendOtp = async (req, res) => {
     let otp = Math.floor(100000 + Math.random() * 900000);
     let message = {
       from: "vivek kumar <viveksh94108@gmail.com>",
-      to: "viveksh94108@gmail.com",
+      to: "vivek2414025@akgec.ac.in",
       subject: "otp for email verification",
       text: `Your OTP is ${otp}`,
       html: `<p> Your OTP is ${otp} <br/> This is a server generated email please don't reply to it....</p>`,

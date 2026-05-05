@@ -2,6 +2,7 @@
   padding: 24px;
   width: 100%;
   max-width: 500px;
+  height: 82vh;
   animation: slideUp 0.4s ease;
   box-sizing: border-box;
 }
@@ -158,7 +159,7 @@
 
 .radioLabel:has(input[type="radio"]:checked) {
   border-color: var(--primary-color);
-  background-color: rgba(61, 194, 236, 0.08);
+  background-color: var(--description-color);
   color: var(--primary-color);
 }
 
@@ -170,8 +171,7 @@
 
 .checkboxLabel {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  margin: 0;
   cursor: pointer;
   font-size: 14px;
   color: #9f9f9f;

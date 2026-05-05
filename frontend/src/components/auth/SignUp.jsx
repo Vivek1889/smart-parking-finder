@@ -198,9 +198,15 @@ function SignUp() {
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.checkboxLabel}>
-              <input type="checkbox" required ref={terms} name="terms" />
-              <span>I agree to the terms and conditions</span>
+            <label className={styles.checkboxLabel} htmlFor="terms">
+              <input
+                type="checkbox"
+                required
+                ref={terms}
+                name="terms"
+                id="terms"
+              />{" "}
+              I agree to the terms and conditions
             </label>
           </div>
 
