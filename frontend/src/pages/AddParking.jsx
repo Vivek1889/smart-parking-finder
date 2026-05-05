@@ -18,7 +18,7 @@ function AddParking() {
 
   useEffect(() => {
     if (!user) {
-      return navigate("/auth/login");
+      navigate("/auth/login");
     }
   }, [user, navigate]);
 
